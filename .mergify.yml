@@ -1,10 +1,13 @@
 pull_request_rules:
-  - name: "default merge rule"
+  - name: default merge rule
     conditions: []
     actions:
       merge:
         method: merge
-
 queue_rules:
-  - name: "default"
+  - name: default
     conditions: []
+  - name: test
+scopes:
+  source:
+    manual:
