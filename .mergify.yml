@@ -1,10 +1,11 @@
 queue_rules:
   - name: default
-    merge_conditions: []
+    merge_conditions:
+      - label=ready-to-merge
     merge_method: merge
 
 pull_request_rules:
-  - name: add to queue automatically
+  - name: add to queue
     conditions:
       - base=main
     actions:
