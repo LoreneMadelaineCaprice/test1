@@ -1,11 +1,13 @@
 queue_rules:
   - name: default
     merge_conditions: []
+    merge_method: merge
 
 pull_request_rules:
-  - name: queue PRs
+  - name: queue all PRs
     conditions:
       - base=main
+      - label!=skip-queue
     actions:
       queue:
         name: default
