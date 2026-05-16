@@ -1,10 +1,9 @@
 queue_rules:
   - name: default
     merge_conditions: []
-    merge_method: merge
 
 pull_request_rules:
-  - name: merge using the merge queue
+  - name: queue PRs
     conditions:
       - base=main
     actions:
