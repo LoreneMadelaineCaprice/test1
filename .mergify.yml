@@ -4,10 +4,9 @@ queue_rules:
     merge_method: merge
 
 pull_request_rules:
-  - name: queue all PRs
+  - name: add to queue automatically
     conditions:
       - base=main
-      - label!=skip-queue
     actions:
       queue:
         name: default
