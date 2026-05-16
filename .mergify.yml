@@ -1,13 +1,15 @@
 queue_rules:
   - name: default
     merge_conditions:
-      - label=ready-to-merge
+      - label=do-merge
     merge_method: merge
+    batch_size: 1
 
 pull_request_rules:
-  - name: add to queue
+  - name: add to queue when ready
     conditions:
       - base=main
+      - label=queue-me
     actions:
       queue:
         name: default
